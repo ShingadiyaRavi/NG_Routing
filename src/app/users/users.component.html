@@ -1,0 +1,17 @@
+<table border="5px" width=100%>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>City</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.city}}</td>
+    <td><a [routerLink]="['user/',user.id]">View Detail</a></td>
+  </tr>
+</table>
+
+
+<!-- <app-user-detail [Data]="users"></app-user-detail> -->

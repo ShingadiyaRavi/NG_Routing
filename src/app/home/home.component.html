@@ -1,0 +1,16 @@
+<p>home works!</p>
+
+<table border="5px" width="50%">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+  </tr>
+  <tr *ngFor="let item of apiData">
+    <td>{{ item.id }}</td>
+    <td>{{ item.name }}</td>
+    <td>{{ item.age }}</td>
+    <td>{{ item.city }}</td>
+  </tr>
+</table>

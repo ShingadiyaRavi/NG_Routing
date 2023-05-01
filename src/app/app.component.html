@@ -1,0 +1,20 @@
+<h1>App Component Run</h1>
+
+<h3>Using RouterLink</h3>
+<a routerLink="home">Home</a>&nbsp;
+<a routerLink="about">About</a>&nbsp;
+<a routerLink="contact">Contact</a>&nbsp;
+<a routerLink="userlist">Users</a>&nbsp;
+<hr>
+
+<!-- This is used for just testing using href but it will reload the page everytime click on link -->
+<!-- <h3>Using href</h3>
+<a href="home">Home</a>&nbsp;
+<a href="about">About</a>&nbsp;
+<a href="contact">Contact</a>&nbsp;
+<a href="userlist">Users</a>&nbsp;
+<hr> -->
+
+
+<!-- This is used for the load the component which is select by routes. but we need to link in routerlink so page will not realod-->
+<router-outlet></router-outlet>

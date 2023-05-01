@@ -1,0 +1,60 @@
+Task - 12
+Routing
+	- Static
+	- Dynamic
+	- canActive
+	- canActiveChild
+	- canDeactive
+	- Resolver
+
+	::::::::::[Static & Dynamic]:::::::::
+	Routing means we need to go one page/component to other page/component that time we need to specify routes.
+	The all routes write in the app-routing.module.ts
+	and write in the routes[] array.
+	eg : const routes: Routes = [
+  				{path:'home',component:HomeComponent},
+  				{path:'user',component:UserComponent},
+  				{path:'user/:id',component:UserComponent},
+			];
+
+	we need to link in anchor tag for the routes but we generally used href but here we need to RouterLink to set path to redirect there place.
+
+	basic anchor tag : It will reload the page and redirect to specify ruotes.
+	eg:	<a href='home'>Home component</a>
+
+	Angular anchor tag : It will never reload the page and we can redirect one page to other page so we always used RouterLink in the angular project.
+	eg: <a RouterLink='home'>Home component</a>
+
+	in app-routing.module.ts file we are write all routes. also we can write the route title. so we can view the tab name
+	eg : {
+		path:'contact',
+		title:'Contact Route Is Working',
+		component:ContactComponent
+	}
+
+
+
+	::::::::::::[canActive]::::::::
+		This means only authentic user can view that route. so we need to create guard and used that into routes.
+		If not authentic user then he/she will not get the that route data so one type of security .
+		we need to import in app.module.ts and write in the providers array.
+		we are create a auth guard.
+		->This implement on contact...
+
+
+	::::::[canActiveChild]::::::::
+		This is used for the give the access to work or not work child routes. 
+		it will work with the children[] routes.
+		we are create a admin guard.
+		->This implement on About routes...
+
+
+	::::::::[canDeactive]:::::::::
+		This is basically used for the you want to go this route to other but go before it ask to you... you want to go there ? if yes then you can go otherwise back current routes.
+		we are create a users guard.
+		->This implement on Users Routes....
+
+
+	::::::::[Resolver]:::::::
+		This is used for the web api through data fetch and when api is big so data load time high that time we can used it to solve when data will get that time page will be load otherwise waiting for data and not load the page.
+		->is implement on home routes...
